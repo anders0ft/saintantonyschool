@@ -1,0 +1,19 @@
+{# src/SAS/CoreBundle/Resources/views/Core/activities.html.twig #}
+
+<h2>Activities</h2>
+    
+ <div class="row">
+ 	{% for activity in list_activities %}
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="../images/{{ activity.img }}" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">{{ activity.title }}</a>
+              </h4>
+              <p class="card-text">{{ activity.smallContent }}</p>
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,4 @@
+services:
+#    sas_core.example:
+#        class: SAS\CoreBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

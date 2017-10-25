@@ -1,0 +1,63 @@
+{# src/SAS/CoreBundle/Resources/views/layout.html.twig #}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+    
+        <title>{% block title %}Saint Antony School{% endblock %}</title>
+        
+        {% block stylesheets %}
+            <!-- Bootstrap core CSS -->
+            <link href="../../web/css/bootstrap.min.css" rel="stylesheet">
+        
+            <!-- Custom styles for this template -->
+            <link href="../../web/css/modern-business.css" rel="stylesheet">
+            
+            <link href="../../web/css/custom.css" rel="stylesheet">
+        {% endblock %}
+    
+    </head>
+	<body>
+  
+        <!-- Navigation -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+          <div class="container">
+          	
+            <a class="navbar-brand" href="index.html"></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            {# Inserting Menu #}
+            {% include "SASCoreBundle:Core:menu.html.twig" %}
+            
+          </div>
+        </nav>
+        
+    	{% block body %}
+
+        {% endblock %}
+        
+        <!-- Footer -->
+        <footer class="py-5 bg-dark">
+          <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; andersoft 2017</p>
+          </div>
+          <!-- /.container -->
+        </footer>
+  
+      	{% block javascripts %}
+          	<!-- Bootstrap core JavaScript -->
+            <script src="../../web/js/jquery.min.js"></script>
+            <script src="../../web/js/popper.min.js"></script>
+            <script src="../../web/js/bootstrap.min.js"></script>
+        {% endblock %}
+  </body>
+  
+</html>

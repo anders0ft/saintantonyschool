@@ -1,0 +1,11 @@
+.navbar a.navbar-brand
+{
+	background:url(../images/saint_antony.png) no-repeat;
+	height: 85px;
+	width: 70px;
+}
+
+#sas-header
+{
+	margin-top:44px;
+}
