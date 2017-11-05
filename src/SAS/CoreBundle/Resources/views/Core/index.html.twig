@@ -5,16 +5,11 @@
 {% endblock %}
 
 {% block body %}
-    
-  	{# Including via Controller #}
-  	{{ render(controller("SASCoreBundle:Core:slide")) }}
-  	
-	<!-- Page Content -->
-    <div class="container">
-    	<!-- Welcome Section -->
-    	{{ render(controller("SASCoreBundle:Core:welcome")) }}
-        <!-- /.row -->
-      	<!-- Activities Section -->
-        {{ render(controller("SASCoreBundle:Core:activities")) }}
-    </div>
+
+	<!-- Welcome Section -->
+	{{ render(controller("SASCoreBundle:Core:welcome")) }}
+    <!-- /.row -->
+  	<!-- Activities Section -->
+    {{ render(controller("SASCoreBundle:Core:activities")) }}
+
 {% endblock %}

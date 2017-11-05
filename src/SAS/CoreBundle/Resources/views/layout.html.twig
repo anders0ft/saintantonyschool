@@ -25,29 +25,41 @@
     </head>
 	<body>
   
-        <!-- Navigation -->
+		<!-- Navigation -->
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
           <div class="container">
-          	
-            <a class="navbar-brand" href="index.html"></a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            
+          	{# LOGO #}
+            <a class="navbar-brand" href="{{ path('sas_core_home') }}"></a>
             {# Inserting Menu #}
             {% include "SASCoreBundle:Core:menu.html.twig" %}
-            
           </div>
         </nav>
         
-    	{% block body %}
-
-        {% endblock %}
+        {% if  app.request.get('_route')  == "sas_core_home" %}
+            {# Including via Controller #}
+            {{ render(controller("SASCoreBundle:Core:slide")) }}
+      	{% endif %}
+      	
+      	<div class="container">
+          	{% if  app.request.get('_route')  != "sas_core_home" %}
+    			<h1 class="mt-4 mb-3"><small>{{ 'contact'|title }}</small></h1>
+              	
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="{{ path('sas_core_home') }}">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active">Contact</li>
+                </ol>
+      	    {% endif %}
+      	    
+        	{% block body %}
+            {% endblock %}
+        </div>
         
         <!-- Footer -->
         <footer class="py-5 bg-dark">
           <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; andersoft 2017</p>
+            <p class="m-0 text-center text-white">Copyright &copy; saintantonyschool 2017</p>
           </div>
           <!-- /.container -->
         </footer>

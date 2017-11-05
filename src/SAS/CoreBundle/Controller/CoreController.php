@@ -43,6 +43,11 @@ class CoreController extends Controller
 		
 		return $this->render('SASCoreBundle:Core:activities.html.twig', array('list_activities' => $listActivities));
 	}
+	
+	public function contactAction()
+	{
+		return $this->render('SASCoreBundle:Core:contact.html.twig');
+	}
 }
 
 ?>
