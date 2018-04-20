@@ -44,6 +44,16 @@ class CoreController extends Controller
 		return $this->render('SASCoreBundle:Core:activities.html.twig', array('list_activities' => $listActivities));
 	}
 	
+	public function menuAction()
+	{
+		$listMenu = $this	->getDoctrine()
+							->getManager()
+							->getRepository('SASCoreBundle:Menu')
+							->findMenu();
+		
+		return $this->render('SASCoreBundle:Core:menu.html.twig', array('list_menu' => $listMenu));
+	}
+	
 	public function contactAction()
 	{
 		return $this->render('SASCoreBundle:Core:contact.html.twig');

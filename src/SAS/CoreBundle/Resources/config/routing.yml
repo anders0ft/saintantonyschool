@@ -4,7 +4,33 @@ sas_core_home:
     defaults:
         _controller: SASCoreBundle:Core:index
         
+sas_core_aboutus:
+    path: /aboutus
+    defaults:
+        _controller: SASCoreBundle:Core:index
+
+sas_core_teachers:
+    path: /teachers
+    defaults:
+        _controller: SASCoreBundle:Core:index
+
+sas_core_classes:
+    path: /classes
+    defaults:
+        _controller: SASCoreBundle:Core:index
+
+sas_core_gallery:
+    path: /gallery
+    defaults:
+        _controller: SASCoreBundle:Core:index
+
 sas_core_contact:
     path: /contact
     defaults:
         _controller: SASCoreBundle:Core:contact
+
+sas_core_admin:
+    path: /admin
+    defaults:
+        _controller: SASCoreBundle:Core:index
+

@@ -24,14 +24,13 @@
     
     </head>
 	<body>
-  
 		<!-- Navigation -->
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
           <div class="container">
           	{# LOGO #}
             <a class="navbar-brand" href="{{ path('sas_core_home') }}"></a>
             {# Inserting Menu #}
-            {% include "SASCoreBundle:Core:menu.html.twig" %}
+            {{ render(controller("SASCoreBundle:Core:menu")) }}
           </div>
         </nav>
         
@@ -48,7 +47,7 @@
                     <li class="breadcrumb-item">
                       <a href="{{ path('sas_core_home') }}">Home</a>
                     </li>
-                    <li class="breadcrumb-item active">Contact</li>
+                    <li class="breadcrumb-item active">{{ app.request.attributes.get('_route') }}</li>
                 </ol>
       	    {% endif %}
       	    
@@ -69,6 +68,7 @@
             <script src="../../web/js/jquery.min.js"></script>
             <script src="../../web/js/popper.min.js"></script>
             <script src="../../web/js/bootstrap.min.js"></script>
+            <script src="../../web/js/custom.js"></script>
         {% endblock %}
   </body>
   

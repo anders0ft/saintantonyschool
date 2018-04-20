@@ -1,28 +1,11 @@
 {# src/SAS/CoreBundle/Resources/views/Core/menu.html.twig #}
 
 <div class="collapse navbar-collapse" id="navbarResponsive">
-  <ul class="navbar-nav ml-auto">
-    <li class="nav-item">
-      <a class="nav-link" href="{{ path('sas_core_home') }}">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{ path('sas_core_home') }}">About us</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{ path('sas_core_home') }}">Teachers</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{ path('sas_core_home') }}">Classes</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{ path('sas_core_home') }}">Gallery</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{ path('sas_core_contact') }}">Contact</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{ path('sas_core_home') }}">Admin</a>
-    </li>
-    
-  </ul>
+	<ul class="navbar-nav ml-auto">
+    {% for menu in list_menu %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path(menu.rootPath) }}" onclick="addActiveClass()">{{ menu.titre|title }}</a>
+        </li>
+    {% endfor %}
+	</ul>
 </div>
